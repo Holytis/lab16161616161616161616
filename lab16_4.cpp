@@ -17,3 +17,26 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d)
+{
+	int k[4] ;
+	int p[] = {a,b,c,d} ;
+	for(int i=0;i<4;i++)
+	{
+		k[i] = rand()%4 ;
+		for(int j=0;j<i;j++)
+		{
+			if(k[i] == k[j]){
+			i-- ;
+			break;
+			}
+		}
+
+	}
+	a = p[k[0]] ;
+	b = p[k[1]] ;
+	c = p[k[2]] ;
+	d = p[k[3]] ;
+	
+}
